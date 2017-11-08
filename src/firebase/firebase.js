@@ -19,7 +19,7 @@ export { firebase, database as default };
 
 
 
-// database.ref('expenses').on('child_removed', () => {
+// database.ref('expenses').on('child_removed', (snapshot) => {
 //   console.log(snapshot.key, snapshot.val());
 // });
 
@@ -29,6 +29,14 @@ export { firebase, database as default };
 
 // database.ref('expenses').on('child_added', (snapshot) => {
 //   console.log(snapshot.key, snapshot.val());
+// });
+
+
+// database.ref('expenses').push({
+//   description: 'Rent',
+//   note: '',
+//   amount: 109500,
+//   createdAt: 7548541254
 // });
 // database   .ref('expenses')   .once('value')   .then((snapshot) => { const
 // expenses = [];     snapshot.forEach((childSnapshot) => { expenses.push({
